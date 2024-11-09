@@ -4,14 +4,16 @@ using namespace std;
 
 pair<int, int> findPairWithTargetSum(const vector<int>& arr, int target) {
     int n = arr.size();
-    for (int i = 0; i < n; ++i) {
-        for (int j = i + 1; j < n; ++j) {
-            if (arr[i] + arr[j] == target) {
-                return {i, j}; // Return the indices if the pair is found
+    for (int i = 0; i < n; ++i){
+        for (int j = i + 1; j < n; ++j){
+            if (arr[i] + arr[j] == target){
+                return {i, j}; 
+            }
+            else{
+                printf("No pair found with the given target sum.");
             }
         }
     }
-    return {-1, -1}; // Return -1, -1 if no pair is found
 }
 
 int main() {
@@ -27,3 +29,5 @@ int main() {
     
     return 0;
 }
+
+// The Logic i thought in this code is that i will take two loops and check if the sum of the two elements is equal to the target sum then i will return the indices of the two elements.
